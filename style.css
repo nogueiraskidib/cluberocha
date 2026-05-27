@@ -284,8 +284,9 @@ section {
 }
 
 .brand-logo {
-  width: 52px;
-  height: 52px;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
   transition: var(--transition-premium);
 }
 
@@ -439,8 +440,9 @@ section {
 }
 
 .hero-badge-logo {
-  width: 140px;
   height: 210px;
+  width: auto;
+  object-fit: contain;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
   transition: var(--transition-premium);
 }
@@ -460,12 +462,18 @@ section {
 }
 
 .hero-subheadline {
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  color: var(--color-text-muted);
+  font-size: clamp(1.4rem, 2.5vw, 1.95rem);
+  color: var(--color-primary);
+  font-family: var(--font-title);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.45);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 6px;
   max-width: 650px;
   margin-bottom: 40px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
   animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
 }
 
@@ -1212,8 +1220,9 @@ section {
 }
 
 .cta-logo {
-  width: 80px;
-  height: 120px;
+  height: 130px;
+  width: auto;
+  object-fit: contain;
   margin: 0 auto 36px;
   opacity: 0.85;
 }
@@ -1239,8 +1248,9 @@ section {
 }
 
 .footer-logo {
-  width: 48px;
-  height: 48px;
+  height: 56px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-desc {
@@ -1459,8 +1469,8 @@ section {
     font-size: 2.5rem;
   }
   .hero-badge-logo {
-    width: 100px;
-    height: 150px;
+    height: 140px;
+    width: auto;
   }
   
   /* General Grid reductions */
