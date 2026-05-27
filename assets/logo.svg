@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="100%" height="100%" aria-label="JCR Judo Clube Rocha Logo">
+  <defs>
+    <!-- Metallic gradients for borders and JCR text -->
+    <linearGradient id="metal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f0f0" />
+      <stop offset="20%" stop-color="#8a8a8a" />
+      <stop offset="40%" stop-color="#d9d9d9" />
+      <stop offset="60%" stop-color="#1a1a1a" />
+      <stop offset="80%" stop-color="#cccccc" />
+      <stop offset="100%" stop-color="#555555" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF176" />
+      <stop offset="50%" stop-color="#FBC02D" />
+      <stop offset="100%" stop-color="#F57F17" />
+    </linearGradient>
+    <linearGradient id="sakura-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a" />
+      <stop offset="50%" stop-color="#0d0d0d" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <radialGradient id="shield-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFEB3B" />
+      <stop offset="100%" stop-color="#FDD835" />
+    </radialGradient>
+    
+    <!-- Outer shadow filter -->
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    
+    <!-- Emboss filter for text / kanji -->
+    <filter id="emboss" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset dx="1" dy="1" result="offset1"/>
+      <feGaussianBlur stdDeviation="1" result="blur1"/>
+      <feOffset dx="-1" dy="-1" result="offset2"/>
+      <feGaussianBlur stdDeviation="1" result="blur2"/>
+      <feComposite operator="out" in="blur1" in2="blur2" result="diff"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.8 0" result="opacity"/>
+      <feBlend mode="overlay" in="SourceGraphic" in2="opacity"/>
+    </filter>
+
+    <!-- Text paths for curved text inside the shield -->
+    <!-- Left path (starts bottom-left, goes up to top-left) -->
+    <path id="left-text-path" d="M 105,480 C 60,370 60,250 100,185" fill="none" />
+    <!-- Right path (starts top-right, goes down to bottom-right) -->
+    <path id="right-text-path" d="M 400,185 C 440,250 440,370 395,480" fill="none" />
+  </defs>
+
+  <!-- 1. Shield Background Group with Shadow -->
+  <g filter="url(#drop-shadow)">
+    <!-- Outer Metallic Border -->
+    <path d="M 250,45 
+             Q 285,45 320,60 
+             Q 375,85 435,115
+             C 455,160 460,250 435,370
+             C 380,480 300,560 250,600
+             C 200,560 120,480 65,370
+             C 40,250 45,160 65,115
+             Q 125,85 180,60
+             Q 215,45 250,45 Z" 
+          fill="url(#metal-grad)" 
+          stroke="#000000" 
+          stroke-width="3" />
+
+    <!-- Outer Black Border Strip -->
+    <path d="M 250,55 
+             Q 282,55 315,69 
+             Q 368,93 423,121
+             C 442,162 447,245 423,357
+             C 371,460 297,537 250,576
+             C 203,537 129,460 77,357
+             C 53,245 58,162 77,121
+             Q 132,93 185,69
+             Q 218,55 250,55 Z" 
+          fill="#0c0c0c" />
+
+    <!-- Inner Metallic Border Strip -->
+    <path d="M 250,63 
+             Q 280,63 310,76 
+             Q 362,99 414,126
+             C 432,164 437,241 414,347
+             C 364,444 295,518 250,555
+             C 205,518 136,444 86,347
+             C 63,241 68,164 86,126
+             Q 138,99 190,76
+             Q 220,63 250,63 Z" 
+          fill="url(#metal-grad)" />
+
+    <!-- Yellow Shield Center -->
+    <path d="M 250,70 
+             Q 278,70 306,82 
+             Q 357,104 407,130
+             C 424,166 429,238 407,340
+             C 359,433 292,504 250,540
+             C 208,504 141,433 93,340
+             C 71,238 76,166 93,130
+             Q 143,104 194,82
+             Q 222,70 250,70 Z" 
+          fill="url(#shield-glow)" 
+          stroke="#000000" 
+          stroke-width="1.5" />
+  </g>
+
+  <!-- 2. Curved Text & Numbers -->
+  <!-- Left Curve Text: JUDÔ CLUBE ROCHA -->
+  <text font-family="'Inter', 'Montserrat', 'Arial', sans-serif" font-weight="900" font-size="21.5" fill="#000000" letter-spacing="3.5">
+    <textPath href="#left-text-path" startOffset="50%" text-anchor="middle">
+      JUDÔ CLUBE ROCHA
+    </textPath>
+  </text>
+
+  <!-- Right Curve Text: CAMPO GRANDE - MS -->
+  <text font-family="'Inter', 'Montserrat', 'Arial', sans-serif" font-weight="900" font-size="21.5" fill="#000000" letter-spacing="3.5">
+    <textPath href="#right-text-path" startOffset="50%" text-anchor="middle">
+      CAMPO GRANDE - MS
+    </textPath>
+  </text>
+
+  <!-- Year at the bottom: 1979 -->
+  <text x="250" y="475" font-family="'Outfit', 'Space Grotesk', 'Montserrat', sans-serif" font-weight="900" font-size="36" fill="#000000" text-anchor="middle" letter-spacing="2">
+    1979
+  </text>
+
+  <!-- 3. Top "JCR" Text with bold, metallic look -->
+  <g filter="url(#emboss)">
+    <!-- JCR Drop Shadow effect using text offset -->
+    <text x="252" y="145" font-family="'Outfit', 'Space Grotesk', 'Impact', sans-serif" font-weight="900" font-size="74" fill="#000000" text-anchor="middle" letter-spacing="3">JCR</text>
+    <!-- JCR Main Metallic Body -->
+    <text x="250" y="143" font-family="'Outfit', 'Space Grotesk', 'Impact', sans-serif" font-weight="900" font-size="74" fill="url(#metal-grad)" stroke="#111111" stroke-width="2" text-anchor="middle" letter-spacing="3">JCR</text>
+  </g>
+
+  <!-- 4. Center Cherry Blossom (Sakura Flower) in Black -->
+  <g filter="url(#drop-shadow)">
+    <!-- Main Black Sakura Path. Formed by 5 petals centered around (250, 290) -->
+    <!-- Each petal curves outwards, has a V-notch at the tip, and returns to center -->
+    <path d="M 250,290 
+             /* Petal 1: Top (pointing to 12 o'clock) */
+             C 220,240 210,175 230,165 
+             C 240,160 245,170 250,175 
+             C 255,170 260,160 270,165 
+             C 290,175 280,240 250,290 Z
+             
+             M 250,290
+             /* Petal 2: Right-Top (pointing to 2:24) */
+             C 285,250 348,220 357,237
+             C 361,245 350,253 344,258
+             C 350,263 361,271 357,279
+             C 348,296 285,266 250,290 Z
+
+             M 250,290
+             /* Petal 3: Right-Bottom (pointing to 4:48) */
+             C 290,310 338,368 325,382
+             C 318,389 310,378 304,372
+             C 303,380 299,392 291,391
+             C 272,389 260,320 250,290 Z
+
+             M 250,290
+             /* Petal 4: Left-Bottom (pointing to 7:12) */
+             C 210,320 198,389 179,391
+             C 171,392 167,380 166,372
+             C 160,378 152,389 145,382
+             C 132,368 180,310 250,290 Z
+
+             M 250,290
+             /* Petal 5: Left-Top (pointing to 9:36) */
+             C 215,266 152,296 143,279
+             C 139,271 150,263 156,258
+             C 150,253 139,245 143,237
+             C 152,220 215,250 250,290 Z" 
+          fill="url(#sakura-grad)" 
+          stroke="url(#metal-grad)" 
+          stroke-width="4.5" />
+          
+    <!-- Subtle Inner Dark Shadow Circle inside Sakura for depth -->
+    <circle cx="250" cy="285" r="45" fill="#090909" opacity="0.3"/>
+  </g>
+
+  <!-- 5. Kanji "岩" (Rocha) in center of the Sakura -->
+  <!-- Designed with a metallic gold/silver look and embossed for premium detail -->
+  <g filter="url(#emboss)">
+    <!-- Shadow effect for Kanji -->
+    <text x="252" y="325" font-family="'Cinzel', 'Noto Sans JP', 'MS Gothic', 'Yu Gothic', 'serif', 'sans-serif'" font-weight="900" font-size="110" fill="#000000" text-anchor="middle" opacity="0.9">岩</text>
+    <!-- Main Metallic Kanji "岩" -->
+    <text x="250" y="323" font-family="'Cinzel', 'Noto Sans JP', 'MS Gothic', 'Yu Gothic', 'serif', 'sans-serif'" font-weight="900" font-size="110" fill="url(#metal-grad)" stroke="#1a1a1a" stroke-width="1.5" text-anchor="middle">岩</text>
+  </g>
+</svg>
