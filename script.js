@@ -238,9 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Auto Play
+    // Auto Play & Hover states tracking
+    let isHovering = false;
+
     const startAutoPlay = () => {
-      autoSlideInterval = setInterval(nextSlide, 6000);
+      clearInterval(autoSlideInterval);
+      if (!isHovering) {
+        autoSlideInterval = setInterval(nextSlide, 15000);
+      }
     };
 
     const resetAutoPlay = () => {
@@ -253,8 +258,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pause on hover
     const sliderContainer = document.querySelector('.depoimentos-slider');
     if (sliderContainer) {
-      sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-      sliderContainer.addEventListener('mouseleave', startAutoPlay);
+      sliderContainer.addEventListener('mouseenter', () => {
+        isHovering = true;
+        clearInterval(autoSlideInterval);
+      });
+      
+      sliderContainer.addEventListener('mouseleave', () => {
+        isHovering = false;
+        startAutoPlay();
+      });
+
+      // Touch Swipe Support for Mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      sliderContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      sliderContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const swipeDiff = touchStartX - touchEndX;
+        if (Math.abs(swipeDiff) > 50) {
+          if (swipeDiff > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+          resetAutoPlay();
+        }
+      }, { passive: true });
     }
   }
 

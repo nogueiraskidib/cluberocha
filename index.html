@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website oficial do JCR — Judô Clube Rocha. Formando campeões dentro e fora do tatame em Campo Grande - MS desde 1979. Tradição, respeito e alto rendimento.">
-  <meta name="keywords" content="judô, dojo, jcr, judô clube rocha, campo grande ms, artes marciais, judo infantil, judo competicao, defesa pessoal, sensei celso rocha">
+  <meta name="keywords" content="judô, dojo, jcr, judô clube rocha, campo grande ms, artes marciais, judo infantil, judo competicao, defesa pessoal, sensei joao batista da rocha">
   <meta name="author" content="Judô Clube Rocha">
   
   <title>JCR — Judô Clube Rocha | Dojo de Judô Premium e de Alto Rendimento</title>
   
+  <!-- Preload Critical Assets -->
+  <link rel="preload" href="assets/logo.png" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -61,21 +67,18 @@
   <!-- --- 2. HERO SECTION --- -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="assets/hero_bg.png" alt="Judocas treinando Ippon Seoi Nage" loading="eager">
+      <img src="assets/logo.png" alt="Escudo JCR" loading="eager" class="hero-bg-logo">
     </div>
     <div class="hero-overlay"></div>
     
     <div class="container">
-      <div class="hero-badge-wrap">
-        <img src="assets/logo.png" alt="Escudo JCR Premium" class="hero-badge-logo">
-      </div>
       
       <h1 class="hero-headline text-gradient">
         Formando Campeões<br>Dentro e Fora do Tatame.
       </h1>
       
       <p class="hero-subheadline">
-        "Sangue Amarelo e Preto"
+        "<span class="motto-sangue">Sangue</span> Amarelo e <span class="motto-preto">Preto</span>"
       </p>
       
       <div class="hero-actions">
@@ -100,7 +103,7 @@
           <h2 class="section-title text-gradient">O Judô Clube Rocha</h2>
           
           <p class="sobre-history">
-            Fundado em 1979 pelo respeitado Sensei Celso Rocha, o <strong>Judô Clube Rocha (JCR)</strong> nasceu com a missão clara de transmitir o verdadeiro espírito do Judô: a harmonia entre o desenvolvimento do corpo, da mente e do caráter social.
+            Fundado em 1979 pelo respeitado Sensei João Batista da Rocha, o <strong>Judô Clube Rocha (JCR)</strong> nasceu com a missão clara de transmitir o verdadeiro espírito do Judô: a harmonia entre o desenvolvimento do corpo, da mente e do caráter social.
           </p>
           
           <p class="sobre-history">
@@ -113,19 +116,19 @@
           
           <div class="sobre-stats">
             <div class="stat-item">
-              <div class="stat-num">45+</div>
+              <div class="stat-num">47+</div>
               <div class="stat-label">Anos de Tradição</div>
             </div>
             <div class="stat-item">
-              <div class="stat-num">1.5k+</div>
-              <div class="stat-label">Alunos Formados</div>
+              <div class="stat-num">+5</div>
+              <div class="stat-label">Medalhas Internacionais</div>
             </div>
             <div class="stat-item">
-              <div class="stat-num">200+</div>
+              <div class="stat-num">+200</div>
               <div class="stat-label">Medalhas Estaduais</div>
             </div>
             <div class="stat-item">
-              <div class="stat-num">10+</div>
+              <div class="stat-num">+10</div>
               <div class="stat-label">Faixas Pretas Graduados</div>
             </div>
           </div>
@@ -134,7 +137,7 @@
         <div class="sobre-media reveal reveal-delay-2">
           <div class="image-stack">
             <div class="media-frame">
-              <img src="assets/championship_gold.png" alt="Medalha de ouro JCR no tatame">
+              <video src="assets/video.mp4" autoplay loop muted playsinline controls preload="none"></video>
             </div>
           </div>
         </div>
@@ -240,21 +243,19 @@
         </div>
         <h2 class="section-title text-gradient">Nossos Treinos</h2>
         <p class="section-desc" style="margin-left: auto; margin-right: auto;">
-          Programas de judô desenvolvidos especificamente para cada faixa etária e nível de proficiência esportiva, sob constante acompanhamento de especialistas.
+          Programas de judô desenvolvidos especificamente para cada faixa etária, sob constante acompanhamento de especialistas.
         </p>
       </div>
       
       <div class="turmas-tabs reveal">
         <button class="tab-btn active" data-tab="infantil">Infantil (6 a 11 anos)</button>
-        <button class="tab-btn" data-tab="juvenil">Juvenil (12 a 17 anos)</button>
-        <button class="tab-btn" data-tab="adulto">Adulto (18+ anos)</button>
-        <button class="tab-btn" data-tab="competicao">Competição (Elite)</button>
+        <button class="tab-btn" data-tab="adulto">Adulto</button>
       </div>
       
       <!-- Tab 1: Infantil -->
       <div class="turma-content active" id="infantil">
         <div class="turma-media">
-          <img src="assets/turma_infantil.png" alt="Crianças sorridentes treinando judô na JCR">
+          <img src="assets/turma_infantil.png" alt="Crianças sorridentes treinando judô na JCR" loading="lazy">
         </div>
         <div class="turma-details">
           <h3 class="turma-title text-gradient">Judô Infantil</h3>
@@ -279,38 +280,10 @@
         </div>
       </div>
       
-      <!-- Tab 2: Juvenil -->
-      <div class="turma-content" id="juvenil">
-        <div class="turma-media">
-          <img src="assets/turma_juvenil.png" alt="Adolescentes em ação no treino de judô">
-        </div>
-        <div class="turma-details">
-          <h3 class="turma-title text-gradient">Judô Juvenil</h3>
-          <p class="turma-desc">
-            A adolescência é uma fase de transformações complexas. O Judô Clube Rocha fornece aos jovens uma válvula de escape energética ultra-positiva, promovendo o autocontrole marcial, o espírito de cooperação, o combate ao sedentarismo e uma blindagem contra influências negativas externas.
-          </p>
-          <ul class="turma-info-list">
-            <li class="turma-info-item">
-              <span class="turma-info-label">Faixa Etária</span>
-              <span class="turma-info-value">12 a 17 anos</span>
-            </li>
-            <li class="turma-info-item">
-              <span class="turma-info-label">Foco Principal</span>
-              <span class="turma-info-value">Condicionamento Físico, Técnicas de Projeção Avançadas e Autoconfiança</span>
-            </li>
-            <li class="turma-info-item">
-              <span class="turma-info-label">Horários</span>
-              <span class="turma-info-value">Segundas, Quartas e Sextas: 18:30h - 19:30h</span>
-            </li>
-          </ul>
-          <a href="https://wa.me/5567992926819?text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+o+Jud%C3%B4+Juvenil." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Fazer Aula de Teste</a>
-        </div>
-      </div>
-      
-      <!-- Tab 3: Adulto -->
+      <!-- Tab 2: Adulto -->
       <div class="turma-content" id="adulto">
         <div class="turma-media">
-          <img src="assets/turma_adulto.png" alt="Adultos em saudação respeitosa antes do treino">
+          <img src="assets/turma_adulto.png" alt="Adultos em saudação respeitosa antes do treino" loading="lazy">
         </div>
         <div class="turma-details">
           <h3 class="turma-title text-gradient">Judô Adulto</h3>
@@ -320,7 +293,7 @@
           <ul class="turma-info-list">
             <li class="turma-info-item">
               <span class="turma-info-label">Faixa Etária</span>
-              <span class="turma-info-value">Acima de 18 anos</span>
+              <span class="turma-info-value">Adulto</span>
             </li>
             <li class="turma-info-item">
               <span class="turma-info-label">Foco Principal</span>
@@ -332,34 +305,6 @@
             </li>
           </ul>
           <a href="https://wa.me/5567992926819?text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+o+Jud%C3%B4+Adulto." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Fazer Aula de Teste</a>
-        </div>
-      </div>
-      
-      <!-- Tab 4: Competicao -->
-      <div class="turma-content" id="competicao">
-        <div class="turma-media">
-          <img src="assets/turma_competicao.png" alt="Judoca no pódio de competição premium">
-        </div>
-        <div class="turma-details">
-          <h3 class="turma-title text-gradient">Equipe de Alto Rendimento</h3>
-          <p class="turma-desc">
-            A divisão lendária da JCR. Voltada exclusivamente para atletas filiados à Federação de Judô de MS, que buscam o pódio olímpico, estadual e nacional. Nosso programa integra táticas refinadas de Kumikata (pegada), preparação de força física explosiva e mentoria psicológica competitiva.
-          </p>
-          <ul class="turma-info-list">
-            <li class="turma-info-item">
-              <span class="turma-info-label">Nível Requerido</span>
-              <span class="turma-info-value">Sob avaliação dos Senseis (Foco Competitivo)</span>
-            </li>
-            <li class="turma-info-item">
-              <span class="turma-info-label">Foco Principal</span>
-              <span class="turma-info-value">Tática Avançada, Preparação Olímpica e Randori de Alta Intensidade</span>
-            </li>
-            <li class="turma-info-item">
-              <span class="turma-info-label">Horários</span>
-              <span class="turma-info-value">Segundas a Sextas: 21:00h - 22:30h | Sábados: 08:00h - 09:30h</span>
-            </li>
-          </ul>
-          <a href="https://wa.me/5567992926819?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+Equipe+de+Competi%C3%A7%C3%A3o+de+Elite+da+JCR." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Falar com o Treinador</a>
         </div>
       </div>
       
@@ -389,7 +334,7 @@
       <div class="galeria-grid">
         <!-- Item 1 (Treino) -->
         <div class="galeria-item reveal" data-category="treino">
-          <img src="assets/hero_bg.png" alt="Projeção Ippon Seoi Nage na JCR">
+          <img src="assets/hero_bg.png" alt="Projeção Ippon Seoi Nage na JCR" loading="lazy">
           <div class="galeria-overlay">
             <span class="galeria-cat">Treinos</span>
             <h4 class="galeria-item-title">Randori de Alto Nível</h4>
@@ -398,7 +343,7 @@
         
         <!-- Item 2 (Campeonato) -->
         <div class="galeria-item reveal reveal-delay-1" data-category="campeonato">
-          <img src="assets/turma_competicao.png" alt="Combate final em campeonato de judô">
+          <img src="assets/turma_competicao.png" alt="Combate final em campeonato de judô" loading="lazy">
           <div class="galeria-overlay">
             <span class="galeria-cat">Competições</span>
             <h4 class="galeria-item-title">Vitória no Tatame Nacional</h4>
@@ -407,7 +352,7 @@
         
         <!-- Item 3 (Campeonato) -->
         <div class="galeria-item reveal reveal-delay-2" data-category="campeonato">
-          <img src="assets/championship_gold.png" alt="Medalha de ouro da JCR">
+          <img src="assets/championship_gold.png" alt="Medalha de ouro da JCR" loading="lazy">
           <div class="galeria-overlay">
             <span class="galeria-cat">Competições</span>
             <h4 class="galeria-item-title">A Glória do Primeiro Lugar</h4>
@@ -416,7 +361,7 @@
         
         <!-- Item 4 (Evento) -->
         <div class="galeria-item reveal" data-category="evento">
-          <img src="assets/turma_infantil.png" alt="Cerimônia de graduação infantil">
+          <img src="assets/turma_infantil.png" alt="Cerimônia de graduação infantil" loading="lazy">
           <div class="galeria-overlay">
             <span class="galeria-cat">Eventos</span>
             <h4 class="galeria-item-title">Graduação Infantil JCR</h4>
@@ -425,7 +370,7 @@
         
         <!-- Item 5 (Treino) -->
         <div class="galeria-item reveal reveal-delay-1" data-category="treino">
-          <img src="assets/turma_juvenil.png" alt="Treino focado de juvenis na JCR">
+          <img src="assets/turma_juvenil.png" alt="Treino focado de juvenis na JCR" loading="lazy">
           <div class="galeria-overlay">
             <span class="galeria-cat">Treinos</span>
             <h4 class="galeria-item-title">Evolução Técnica Juvenil</h4>
@@ -434,7 +379,7 @@
         
         <!-- Item 6 (Treino) -->
         <div class="galeria-item reveal reveal-delay-2" data-category="treino">
-          <img src="assets/turma_adulto.png" alt="Cerimônia de reverência no tatame">
+          <img src="assets/turma_adulto.png" alt="Cerimônia de reverência no tatame" loading="lazy">
           <div class="galeria-overlay">
             <span class="galeria-cat">Treinos</span>
             <h4 class="galeria-item-title">Reiho: O Respeito no Tatame</h4>
@@ -457,39 +402,19 @@
     <div class="container">
       <div style="text-align: center; margin-bottom: 60px;" class="reveal">
         <div class="section-tag" style="margin-left: auto; margin-right: auto;">
-          <i class="fa-solid fa-user-tie"></i> Guardiões do Legado
+          <i class="fa-solid fa-user-tie"></i> Guardião do Tatame
         </div>
-        <h2 class="section-title text-gradient">Nossos Senseis</h2>
+        <h2 class="section-title text-gradient">Nosso Sensei</h2>
         <p class="section-desc" style="margin-left: auto; margin-right: auto;">
-          Formação marcial e pedagógica de elite. Nossos professores são certificados pela CBJ e possuem vasta experiência na formação de faixas pretas e campeões.
+          Formação marcial e preparação técnica de elite. Nosso sensei é credenciado pela CBJ e possui vasta experiência na preparação de campeões.
         </p>
       </div>
       
-      <div class="senseis-grid">
-        <!-- Sensei 1 -->
-        <div class="sensei-card reveal">
-          <div class="sensei-media">
-            <img src="assets/sensei_rocha.png" alt="Portrait Sensei Celso Rocha fundador da JCR">
-          </div>
-          <div class="sensei-details">
-            <span class="sensei-rank">Fundador &amp; Diretor Técnico</span>
-            <h3 class="sensei-name text-gradient">Sensei Celso Rocha</h3>
-            <p class="sensei-bio">
-              Faixa Preta 6º Dan (Kodansha). Fundou o Judô Clube Rocha em 1979 com a visão de forjar cidadãos de bem e competidores indomáveis. Já graduou mais de 50 faixas pretas oficiais e é uma das maiores referências marciais do MS.
-            </p>
-            <ul class="sensei-achievements">
-              <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> 45+ Anos de Ensino de Judô</li>
-              <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Graduação Kodansha (6º Dan)</li>
-              <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Ex-Técnico da Seleção Estadual de Judô</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Sensei 2 -->
-        <div class="sensei-card reveal reveal-delay-1">
-          <div class="sensei-media">
-            <!-- Reuse generated asset dynamically, looking exceptionally professional -->
-            <img src="assets/turma_adulto.png" alt="Sensei Diogo Rocha">
+      <div class="senseis-grid" style="display: flex; justify-content: center; max-width: 420px; margin: 0 auto;">
+        <!-- Sensei Diogo Rocha -->
+        <div class="sensei-card reveal" style="width: 100%;">
+          <div class="sensei-media" style="height: 410px;">
+            <img src="assets/sensei_diogo.jpg" alt="Sensei Diogo Rocha de alto rendimento" loading="lazy">
           </div>
           <div class="sensei-details">
             <span class="sensei-rank">Sensei de Alto Rendimento</span>
@@ -501,25 +426,6 @@
               <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Campeão Brasileiro Master</li>
               <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Bacharel em Educação Física</li>
               <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Especialista em Fisiologia do Exercício</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Sensei 3 (Auxiliar Técnico de Elite) -->
-        <div class="sensei-card reveal reveal-delay-2">
-          <div class="sensei-media">
-            <img src="assets/turma_juvenil.png" alt="Professora auxiliar JCR">
-          </div>
-          <div class="sensei-details">
-            <span class="sensei-rank">Coordenadora Judô Infantil</span>
-            <h3 class="sensei-name text-gradient">Sensei Amanda Rocha</h3>
-            <p class="sensei-bio">
-              Faixa Preta 2º Dan. Especialista em pedagogia da atividade motora infantil e desenvolvimento socioemocional. Desenvolveu a metodologia exclusiva de judô escolar que é referência no estado.
-            </p>
-            <ul class="sensei-achievements">
-              <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Especialista em Judô Escolar</li>
-              <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> 10+ Anos dedicados à Metodologia Infantil</li>
-              <li class="sensei-achievement-item"><i class="fa-solid fa-circle-check"></i> Certificada pelo COB (Esporte Infantil)</li>
             </ul>
           </div>
         </div>
@@ -552,56 +458,117 @@
         <div class="depoimentos-track" id="slider-track">
           <!-- Slide 1 -->
           <div class="depoimento-slide">
-            <div class="depoimento-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="depoimento-text">
-              "A mudança na disciplina, foco e obediência da Sofia na escola e em casa foi nítida após apenas 6 meses de treino na JCR. Os senseis têm um carinho pedagógico fantástico combinado com a firmeza necessária para impor limites. Indico para todos os pais!"
-            </p>
-            <div class="depoimento-author">
-              <span class="author-name">Ricardo Mendes Santos</span>
-              <span class="author-role">Pai da Sofia (Aluna Judô Infantil, 8 anos)</span>
-            </div>
+            <a href="https://maps.app.goo.gl/TpCeofbWg4kraWLD6" target="_blank" rel="noopener noreferrer" class="depoimento-card-link">
+              <div class="google-badge-container">
+                <span class="google-badge"><i class="fa-brands fa-google google-colored-icon"></i> Avaliação do Google</span>
+              </div>
+              <div class="depoimento-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="depoimento-text">
+                "Minha filha pratica o judô 🥋 e adora os Sensei e os demais atletas. Nos sentimos bem acolhidos, satisfeitos e confiantes que nosso bem mais precioso, os filhos, estão em ótimas mãos."
+              </p>
+              <div class="depoimento-author">
+                <span class="author-name">Julia Martinez</span>
+                <span class="author-role">Mãe de Aluna • Google Maps</span>
+              </div>
+            </a>
           </div>
           
           <!-- Slide 2 -->
           <div class="depoimento-slide">
-            <div class="depoimento-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="depoimento-text">
-              "O Judô Clube Rocha não é apenas uma academia comum de lutas, é uma verdadeira escola de alto rendimento. A infraestrutura e a atenção técnica milimétrica do Sensei Celso Rocha me deram a base para disputar e vencer campeonatos nacionais de peso!"
-            </p>
-            <div class="depoimento-author">
-              <span class="author-name">Amanda Albuquerque</span>
-              <span class="author-role">Atleta da Equipe Competitiva de Elite</span>
-            </div>
+            <a href="https://maps.app.goo.gl/t4EzFMFgyiroUyfR6" target="_blank" rel="noopener noreferrer" class="depoimento-card-link">
+              <div class="google-badge-container">
+                <span class="google-badge"><i class="fa-brands fa-google google-colored-icon"></i> Avaliação do Google</span>
+              </div>
+              <div class="depoimento-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="depoimento-text">
+                "O esporte transforma vidas, obrigada ao judô clube Rocha! 💪💪"
+              </p>
+              <div class="depoimento-author">
+                <span class="author-name">Jusley Moura</span>
+                <span class="author-role">Aluno Judô Adulto • Google Maps</span>
+              </div>
+            </a>
           </div>
           
           <!-- Slide 3 -->
           <div class="depoimento-slide">
-            <div class="depoimento-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="depoimento-text">
-              "Encontrei no Judô Clube Rocha o escape perfeito para o estresse absurdo da rotina empresarial. O treino do judô adulto é dinâmico, focado no condicionamento físico e com técnicas incríveis de autodefesa. O ambiente do tatame é de extremo respeito."
-            </p>
-            <div class="depoimento-author">
-              <span class="author-name">Gabriel Nogueira</span>
-              <span class="author-role">Empresário (Aluno Judô Adulto, 36 anos)</span>
-            </div>
+            <a href="https://maps.app.goo.gl/gJ9Mxmag8H7fNHtz8" target="_blank" rel="noopener noreferrer" class="depoimento-card-link">
+              <div class="google-badge-container">
+                <span class="google-badge"><i class="fa-brands fa-google google-colored-icon"></i> Avaliação do Google</span>
+              </div>
+              <div class="depoimento-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="depoimento-text">
+                "Melhor dojo de judô de Campo Grande! Excelente estrutura, ambiente super familiar e focado no respeito e no desenvolvimento de cada aluno. Nota 10!"
+              </p>
+              <div class="depoimento-author">
+                <span class="author-name">Ana Beatriz Sabbo</span>
+                <span class="author-role">Mãe de Aluno • Google Maps</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="depoimento-slide">
+            <a href="https://maps.app.goo.gl/JKjBX34cyaPCBVLG6" target="_blank" rel="noopener noreferrer" class="depoimento-card-link">
+              <div class="google-badge-container">
+                <span class="google-badge"><i class="fa-brands fa-google google-colored-icon"></i> Avaliação do Google</span>
+              </div>
+              <div class="depoimento-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="depoimento-text" style="font-size: 1.15rem; line-height: 1.6;">
+                "Clube de judô sério, com profissionais competentes e excelência na missão de ensinar essa arte marcial. Os senseis dão total suporte aos atletas na escalada do conhecimento das técnicas de judô, seja para utilização na vida em geral, como para aplicação nas competições de eventos esportivos de âmbito municipal ao mundial formando atletas de alto rendimento."
+              </p>
+              <div class="depoimento-author">
+                <span class="author-name">Raquel Damasceno</span>
+                <span class="author-role">Aluna / Familiar • Google Maps</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="depoimento-slide">
+            <a href="https://maps.app.goo.gl/Fpjiv6HbkXra9bfm6" target="_blank" rel="noopener noreferrer" class="depoimento-card-link">
+              <div class="google-badge-container">
+                <span class="google-badge"><i class="fa-brands fa-google google-colored-icon"></i> Avaliação do Google</span>
+              </div>
+              <div class="depoimento-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="depoimento-text">
+                "Melhor de todas a academias de judô do estado MS. Professores comprometidos e preparo competitivo para quem gosta. Local de fazer amigos verdadeiros."
+              </p>
+              <div class="depoimento-author">
+                <span class="author-name">Katy Fernandes</span>
+                <span class="author-role">Aluna • Google Maps</span>
+              </div>
+            </a>
           </div>
         </div>
         
@@ -609,6 +576,8 @@
           <span class="slider-dot active" data-index="0"></span>
           <span class="slider-dot" data-index="1"></span>
           <span class="slider-dot" data-index="2"></span>
+          <span class="slider-dot" data-index="3"></span>
+          <span class="slider-dot" data-index="4"></span>
         </div>
       </div>
     </div>
@@ -675,9 +644,6 @@
             
             <li class="footer-link" style="color: var(--color-text); font-weight: 600; margin-top: 5px;">Judô Adulto / Iniciantes:</li>
             <li class="footer-link" style="font-size: 0.85rem; padding-left: 10px;">Seg a Qui: 19:30h - 21:00h</li>
-            
-            <li class="footer-link" style="color: var(--color-text); font-weight: 600; margin-top: 5px;">Equipe de Elite:</li>
-            <li class="footer-link" style="font-size: 0.85rem; padding-left: 10px;">Seg a Sex: 21:00h - 22:30h</li>
           </ul>
         </div>
         
@@ -719,9 +685,9 @@
   </footer>
 
   <!-- Lucide SVG Icons library -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
   
   <!-- Custom JS Lógica -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
